@@ -34,7 +34,7 @@ bash ./scripts/PaiFilter/Traffic.sh
 bash ./scripts/PaiFilter/Weather.sh
 ```
 
-## Our Other Work in the Frequency Domain
+## Our Other Work about Learning in the Frequency Domain
 🚩 [IJCAI 2024]: [**Deep Frequency Derivative Learning for Non-stationary Time Series Forecasting**](https://arxiv.org/abs/2407.00502)
 
 🚩 [NeurIPS 2023]: [**Frequency-domain MLPs are more effective learners in time series forecasting**](https://proceedings.neurips.cc/paper_files/paper/2023/hash/f1d16af76939f476b5f040fd1398c0a3-Abstract-Conference.html) 
