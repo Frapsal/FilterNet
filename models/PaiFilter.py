@@ -13,8 +13,7 @@ class Model(nn.Module):
 
         self.embed_size = self.seq_len
         self.hidden_size = configs.hidden_size
-
-        # global filter
+        
         self.w = nn.Parameter(self.scale * torch.randn(1, self.embed_size))
 
         self.fc = nn.Sequential(

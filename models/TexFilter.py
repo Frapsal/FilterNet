@@ -21,7 +21,6 @@ class Model(nn.Module):
         self.embedding = nn.Linear(self.seq_len, self.embed_size)
         self.token = nn.Conv1d(in_channels=self.seq_len, out_channels=self.embed_size, kernel_size=(1,))
 
-        # global filter
         self.w = nn.Parameter(self.scale * torch.randn(2, self.embed_size))
         self.w1 = nn.Parameter(self.scale * torch.randn(2, self.embed_size))
 
