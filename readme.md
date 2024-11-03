@@ -1,18 +1,7 @@
 # FilterNet (NeurIPS 2024)
 
-The repo is the official implementation for the paper: "FilterNet: Harnessing Frequency Filters for
-Time Series Forecasting".
+The repo is the official implementation for the paper: "[**FilterNet: Harnessing Frequency Filters for Time Series Forecasting**](https://neurips.cc/virtual/2024/poster/93257)".
 
-## Updates
-🚩News [2024.09]: [**FilterNet: Harnessing Frequency Filters for Time Series Forecasting**](https://neurips.cc/virtual/2024/poster/93257) has been accepted by NeurIPS 2024.
-
-🚩News [2024.04]: [**Deep Frequency Derivative Learning for Non-stationary Time Series Forecasting**](https://arxiv.org/abs/2407.00502) has been accepted by IJCAI 2024.
-
-🚩News [2024.03]: [**Deep Coupling Network For Multivariate Time Series Forecasting**](https://dl.acm.org/doi/abs/10.1145/3653447) has been accepted by TOIS.
-
-🚩News [2023.09]: [**Frequency-domain MLPs are more effective learners in time series forecasting**](https://proceedings.neurips.cc/paper_files/paper/2023/hash/f1d16af76939f476b5f040fd1398c0a3-Abstract-Conference.html) and
-[**FourierGNN: Rethinking Multivariate Time Series Forecasting from a Pure Graph Perspective**](https://proceedings.neurips.cc/paper_files/paper/2023/hash/dc1e32dd3eb381dbc71482f6a96cbf86-Abstract-Conference.html) 
-have been accepted by NeurIPS 2023.
 
 ## Getting Started
 
@@ -44,6 +33,17 @@ bash ./scripts/PaiFilter/ECL.sh
 bash ./scripts/PaiFilter/Traffic.sh
 bash ./scripts/PaiFilter/Weather.sh
 ```
+
+## Our Other Work in the Frequency Domain
+🚩 [IJCAI 2024]: [**Deep Frequency Derivative Learning for Non-stationary Time Series Forecasting**](https://arxiv.org/abs/2407.00502)
+
+🚩 [NeurIPS 2023]: [**Frequency-domain MLPs are more effective learners in time series forecasting**](https://proceedings.neurips.cc/paper_files/paper/2023/hash/f1d16af76939f476b5f040fd1398c0a3-Abstract-Conference.html) 
+
+🚩 [NeurIPS 2023]: [**FourierGNN: Rethinking Multivariate Time Series Forecasting from a Pure Graph Perspective**](https://proceedings.neurips.cc/paper_files/paper/2023/hash/dc1e32dd3eb381dbc71482f6a96cbf86-Abstract-Conference.html) 
+
+🚩 [arXiv]: [**A Survey on Deep Learning based Time Series Analysis with Frequency Transformation**](https://arxiv.org/abs/2302.02173)
+
+
 
 ## Acknowledgement
 
