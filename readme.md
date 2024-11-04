@@ -49,14 +49,13 @@ bash ./scripts/PaiFilter/Weather.sh
 
 We appreciate the following GitHub repositories for providing valuable code bases and datasets:
 
+https://github.com/wanghq21/MICN
+
+https://github.com/thuml/TimesNet
 
 https://github.com/aikunyi/FreTS
 
 https://github.com/VEWOXIC/FITS
-
-https://github.com/wanghq21/MICN
-
-https://github.com/thuml/TimesNet
 
 https://github.com/plumprc/RTSF
 
@@ -73,3 +72,5 @@ https://github.com/MAZiqing/FEDformer
 https://github.com/yuqinie98/PatchTST
 
 https://github.com/thuml/iTransformer
+
+https://github.com/thuml/Time-Series-Library

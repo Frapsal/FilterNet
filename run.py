@@ -23,14 +23,14 @@ if __name__ == '__main__':
     parser.add_argument('--task_name', type=str, default='long_term_forecast',
                         help='task name, options:[long_term_forecast, short_term_forecast, imputation, classification, anomaly_detection]')
     parser.add_argument('--is_training', type=int, default=1, help='status')
-    parser.add_argument('--model_id', type=str, default='ETTh1', help='model id')
+    parser.add_argument('--model_id', type=str, default='ETTm1', help='model id')
     parser.add_argument('--model', type=str, default='PaiFilter',
                         help='model name, options: [PaiFilter, ArbLinear, TexFilter, Autoformer, Transformer, TimesNet, iTransformer, PatchTST,SLinear]')
 
     # data loader
-    parser.add_argument('--data', type=str, default='ETTh1', help='dataset type')
+    parser.add_argument('--data', type=str, default='ETTm1', help='dataset type')
     parser.add_argument('--root_path', type=str, default='../../dataset/ETT-small', help='root path of the data file')
-    parser.add_argument('--data_path', type=str, default='ETTh1.csv', help='data file')
+    parser.add_argument('--data_path', type=str, default='ETTm1.csv', help='data file')
     parser.add_argument('--features', type=str, default='M',
                         help='forecasting task, options:[M, S, MS]; M:multivariate predict multivariate, S:univariate predict univariate, MS:multivariate predict univariate')
     parser.add_argument('--target', type=str, default='1', help='target feature in S or MS task')
@@ -83,10 +83,10 @@ if __name__ == '__main__':
     # optimization
     parser.add_argument('--num_workers', type=int, default=0, help='data loader num workers')
     parser.add_argument('--itr', type=int, default=1, help='experiments times')
-    parser.add_argument('--train_epochs', type=int, default=20, help='train epochs')
-    parser.add_argument('--batch_size', type=int, default=128, help='batch size of train input data')
-    parser.add_argument('--patience', type=int, default=6, help='early stopping patience')
-    parser.add_argument('--learning_rate', type=float, default=0.03, help='optimizer learning rate')
+    parser.add_argument('--train_epochs', type=int, default=15, help='train epochs')
+    parser.add_argument('--batch_size', type=int, default=32, help='batch size of train input data')
+    parser.add_argument('--patience', type=int, default=5, help='early stopping patience')
+    parser.add_argument('--learning_rate', type=float, default=0.01, help='optimizer learning rate')
     parser.add_argument('--des', type=str, default='test', help='exp description')
     parser.add_argument('--loss', type=str, default='MSE', help='loss function')
     parser.add_argument('--lradj', type=str, default='type1', help='adjust learning rate')
