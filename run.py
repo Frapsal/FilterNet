@@ -24,8 +24,7 @@ if __name__ == '__main__':
                         help='task name, options:[long_term_forecast, short_term_forecast, imputation, classification, anomaly_detection]')
     parser.add_argument('--is_training', type=int, default=1, help='status')
     parser.add_argument('--model_id', type=str, default='ETTm1', help='model id')
-    parser.add_argument('--model', type=str, default='PaiFilter',
-                        help='model name, options: [PaiFilter, ArbLinear, TexFilter, Autoformer, Transformer, TimesNet, iTransformer, PatchTST,SLinear]')
+    parser.add_argument('--model', type=str, default='PaiFilter', help='model name, options: [PaiFilter, TexFilter]')
 
     # data loader
     parser.add_argument('--data', type=str, default='ETTm1', help='dataset type')
