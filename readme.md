@@ -1,6 +1,6 @@
 # FilterNet (NeurIPS 2024)
 
-The repo is the official implementation for the paper: "[**FilterNet: Harnessing Frequency Filters for Time Series Forecasting**](https://neurips.cc/virtual/2024/poster/93257)".
+The repo is the official implementation for the paper: "[**FilterNet: Harnessing Frequency Filters for Time Series Forecasting**](https://arxiv.org/abs/2411.01623)".
 
 
 ## Getting Started
