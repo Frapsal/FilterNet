@@ -90,26 +90,8 @@ class Dataset_ETT_hour(Dataset):
         r_end = r_begin + self.label_len + self.pred_len
 
         seq_x = self.data_x[s_begin:s_end]
-        # seq_x = np.roll(seq_x, 24, 0)
-        # if self.set_type == 2:
-        #     seq_x = np.roll(seq_x, 24, 0)
-        # if self.set_type == 2:
-        # # # filter zero\low\high
-        #     x = np.fft.rfft(seq_x, axis=0)
-            # x[40:48][:] = 1 * x[40:48][:]
-            # x = (x[:][:] - x[0][:]) / x[0][:]
-        # #     # x[40:48][:] = 0
-        #     seq_x = np.fft.irfft(x, axis=0)
         seq_y = self.data_y[r_begin:r_end]
-        # x = np.fft.rfft(seq_x, axis=0)
-        # x[0:40][:] = 0
-        # x[40:49][:] = x[40:49][:] * 20
-        # seq_x = np.fft.irfft(x, axis=0)
-        # y = np.fft.rfft(seq_y, axis=0)
-        # y[0:40][:] = 0
-        # y[40:49][:] = y[40:49][:] * 20
-        # seq_y = np.fft.irfft(y, axis=0)
-
+        
         seq_x_mark = self.data_stamp[s_begin:s_end]
         seq_y_mark = self.data_stamp[r_begin:r_end]
 
@@ -298,16 +280,6 @@ class Dataset_Custom(Dataset):
         r_end = r_begin + self.label_len + self.pred_len
 
         seq_x = self.data_x[s_begin:s_end]
-        # seq_x = np.roll(seq_x, 36, 0)
-        # np.random.shuffle(seq_x)
-        # if self.set_type == 2:
-            # seq_x = 2 * seq_x
-            # seq_x = np.roll(seq_x, 12, 0)
-        # if self.set_type == 2:
-        #     # filter zero\low\high
-        #     x = np.fft.rfft(seq_x, axis=0)
-        #     x[10:20][:] = 0
-        #     seq_x = np.fft.irfft(x, axis=0)
         seq_y = self.data_y[r_begin:r_end]
         seq_x_mark = self.data_stamp[s_begin:s_end]
         seq_y_mark = self.data_stamp[r_begin:r_end]
