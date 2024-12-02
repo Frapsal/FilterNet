@@ -178,59 +178,6 @@ class Exp_Long_Term_Forecast(Exp_Basic):
 
         return self.model
 
-    def transfer_function(self, setting, test=3):
-        test_data, test_loader = self._get_data(flag='test')
-        if test == 3:
-            print('load model and output the transfer function')
-            self.model.load_state_dict(torch.load(os.path.join('./checkpoints/' + setting, 'checkpoint.pth')))
-
-        # impulse signal
-        from scipy import signal
-        imp = signal.unit_impulse(96, 'mid')
-
-        imp_input = torch.tensor(imp).unsqueeze(0).unsqueeze(0).permute(0, 2, 1)
-
-        self.model.eval()
-        with torch.no_grad():
-            for i, (batch_x, batch_y, batch_x_mark, batch_y_mark) in enumerate(test_loader):
-                # batch_x: 1, 96, N
-                # batch_x = batch_x.float().to(self.device)
-                batch_x = imp_input.float().to(self.device)
-                batch_y = batch_y.float().to(self.device)
-
-                batch_x_mark = batch_x_mark.float().to(self.device)
-                batch_y_mark = batch_y_mark.float().to(self.device)
-
-                # decoder input
-                dec_inp = torch.zeros_like(batch_y[:, -self.args.pred_len:, :]).float()
-                dec_inp = torch.cat([batch_y[:, :self.args.label_len, :], dec_inp], dim=1).float().to(self.device)
-                # encoder - decoder
-                if self.args.use_amp:
-                    with torch.cuda.amp.autocast():
-                        if self.args.output_attention:
-                            outputs = self.model(batch_x, batch_x_mark, dec_inp, batch_y_mark)[0]
-                        else:
-                            outputs = self.model(batch_x, batch_x_mark, dec_inp, batch_y_mark)
-                else:
-                    if self.args.output_attention:
-                        outputs = self.model(batch_x, batch_x_mark, dec_inp, batch_y_mark)[0]
-
-                    else:
-                        outputs = self.model(batch_x, batch_x_mark, dec_inp, batch_y_mark)
-
-                f_dim = -1 if self.args.features == 'MS' else 0
-                outputs = outputs[:, -self.args.pred_len:, :]
-                batch_y = batch_y[:, -self.args.pred_len:, :].to(self.device)
-                # 1,96,1
-                outputs = outputs.permute(0, 2, 1)
-                outputs = outputs.squeeze(0).squeeze(0)
-                outputs = outputs.detach().cpu().numpy()
-                # outputs are the transfer function
-                np.save('patchtst_etth1.npy', outputs)
-
-                return
-
-
     def test(self, setting, test=0):
         test_data, test_loader = self._get_data(flag='test')
         if test:
