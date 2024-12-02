@@ -169,8 +169,5 @@ if __name__ == '__main__':
 
         exp = Exp(args)  # set experiments
         print('>>>>>>>testing : {}<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<'.format(setting))
-        if args.is_training == 3:
-            exp.transfer_function(setting, test=3)
-        else:
-            exp.test(setting, test=1)
+        exp.test(setting, test=1)
         torch.cuda.empty_cache()
