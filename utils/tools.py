@@ -79,7 +79,6 @@ class StandardScaler():
 
 
 def visual(true, preds=None, name='./pic/test.pdf'):
-
     x = np.arange(95, 192, 1)
     y = np.arange(95, 192, 1)
     z = np.arange(0, 96, 1)
