@@ -79,23 +79,14 @@ class StandardScaler():
 
 
 def visual(true, preds=None, name='./pic/test.pdf'):
-    x = np.arange(95, 192, 1)
-    y = np.arange(95, 192, 1)
-    z = np.arange(0, 96, 1)
-    plt.figure(figsize=(12, 4))
-    plt.grid(linestyle="--")
-
-    plt.plot(x, true[95:192], label='GroundTruth', linewidth=4, color='blue')
+    """
+    Results visualization
+    """
+    plt.figure()
+    plt.plot(true, label='GroundTruth', linewidth=2)
     if preds is not None:
-        plt.plot(y, preds[95:192], label='Prediction', linewidth=4, color='orange')
-    plt.plot(z, preds[0:96], label='Input', linewidth=4, color='red')
-
-    plt.xlabel("Time", fontsize=20, fontweight='bold')
-    plt.ylabel("Values", fontsize=20, fontweight='bold')
-    plt.xticks(fontsize=20, fontweight='bold')
-    plt.yticks(fontsize=20, fontweight='bold')
-    plt.grid(True)
-    plt.legend(loc='upper left')
+        plt.plot(preds, label='Prediction', linewidth=2)
+    plt.legend()
     plt.savefig(name, bbox_inches='tight')
 
 
