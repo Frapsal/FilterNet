@@ -34,6 +34,10 @@ bash ./scripts/PaiFilter/Traffic.sh
 bash ./scripts/PaiFilter/Weather.sh
 ```
 
+## Updates ##
+👉 News (2024.12): Another one of our recent works, [**Amplifier: Bringing Attention to Neglected Low-Energy Components in Time Series Forecasting**](https://arxiv.org/abs/2501.17216), has been accepted by AAAI 2025.
+
+
 ## Our Other Work about Learning in the Frequency Domain for Time Series Analysis
 🚩 [IJCAI 2024]: [**Deep Frequency Derivative Learning for Non-stationary Time Series Forecasting**](https://arxiv.org/abs/2407.00502)
 
